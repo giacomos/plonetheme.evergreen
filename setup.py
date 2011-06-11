@@ -5,7 +5,7 @@ setup(
         name='plonetheme.evergreen',
         description='An installable Diazo theme for Plone 4.1',
         long_description=open('README.rst', 'rb').read(),
-        version='1.0',
+        version='1.1dev',
         author='Giacomo Spettoli',
         author_email='giacomo.spettoli@gmail.com',
         url='http://svn.plone.org/svn/collective/plonetheme.evergreen',
