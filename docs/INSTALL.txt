@@ -1,52 +1,33 @@
-plonetheme.evergreen Installation
----------------------------------
+Installation
+=============
 
-To install plonetheme.evergreen into the global Python environment (or a workingenv),
-using a traditional Zope 2 instance, you can do this:
+Add Plone site
+---------------------
 
-* When you're reading this you have probably already run 
-  ``easy_install plonetheme.evergreen``. Find out how to install setuptools
-  (and EasyInstall) here:
-  http://peak.telecommunity.com/DevCenter/EasyInstall
+Install Plone 4.1 with `plone.app.theming`_ and create a Plone site (if you have not already)
+with Diazo theming configured.
 
-* If you are using Zope 2.9 (not 2.10), get `pythonproducts`_ and install it 
-  via::
+Zip file
+---------------------
 
-    python setup.py install --home /path/to/instance
+If you are an end user, you might enjoy installation via zip file import.
 
-into your Zope instance.
+1. Download the zip file: http://svn.plone.org/svn/collective/plonetheme.evergreen/trunk/evergreen.zip
+2. Import the theme from the Diazo theme control panel.
 
-* Create a file called ``plonetheme.evergreen-configure.zcml`` in the
-  ``/path/to/instance/etc/package-includes`` directory.  The file
-  should only contain this::
+Buildout
+---------------------
 
-    <include package="plonetheme.evergreen" />
+If you are a developer, you might enjoy installation via buildout.
 
-.. _pythonproducts: http://plone.org/products/pythonproducts
-
-
-Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance
-recipe to manage your project, you can do this:
-
-* Add ``plonetheme.evergreen`` to the list of eggs to install, e.g.:
-
-    [buildout]
-    ...
-    eggs =
-        ...
-        plonetheme.evergreen
-       
-* Tell the plone.recipe.zope2instance recipe to install a ZCML slug:
+Add ``plonetheme.evergreen`` to your ``plone.recipe.zope2instance`` section's *eggs* parameter e.g.::
 
     [instance]
-    recipe = plone.recipe.zope2instance
-    ...
-    zcml =
+    eggs =
+        Plone
         plonetheme.evergreen
-      
-* Re-run buildout, e.g. with:
 
-    $ ./bin/buildout
-        
-You can skip the ZCML slug if you are going to explicitly include the package
-from another package's configure.zcml file.
+Select theme
+---------------------
+
+Select and enable the theme from the Diazo control panel. That's it!
