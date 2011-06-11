@@ -5,10 +5,10 @@ setup(
         name='plonetheme.evergreen',
         description='An installable Diazo theme for Plone 4.1',
         long_description=open('README.rst', 'rb').read(),
-        version='0.1.0',
+        version='1.0',
         author='Giacomo Spettoli',
         author_email='giacomo.spettoli@gmail.com',
-        url='https://github.com/giacomos/plonetheme.evergreen',
+        url='http://svn.plone.org/svn/collective/plonetheme.evergreen',
         packages=find_packages(),
         include_package_data=True,
         namespace_packages=[
