@@ -1,54 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rules
     xmlns="http://namespaces.plone.org/diazo"
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <!-- Head: title -->
+    <rules css:if-content="#visual-portal-wrapper">
+        <theme href="index.html" />
+    </rules>
+
     <replace content="/html/head/title" theme="/html/head/title" />
-    <!-- Base tag -->
     <replace content="/html/head/base" theme="/html/head/base" />
-    <!-- meta tag -->
     <replace content="/html/head/meta" theme="/html/head/meta" />
-   <!-- Drop styles in the head - these are added back by including them from Plone -->
-    <!--
-    <drop theme="/html/head/link" />
-    <drop theme="/html/head/style" />
-    -->
-    <!-- Pull in Plone CSS -->
-    <prepend content="/html/head/link | /html/head/style " theme="/html/head"/>
-    <!--before content='/html/head' theme='/html/head' /-->
-
-    <!-- Pull in Plone JS -->
-    <after content="/html/head/script" theme="/html/head"/>
-
-    <!-- Body class -->
-    <copy attributes="class" css:theme="body" css:content="body"/>
-    
-    <!-- Pull in global navigation menu-->
+    <prepend content='/html/head' theme='/html/head' />
+    <copy attributes="class dir id" css:theme="body" css:content="body"/>
+    <replace css:theme-children="#logo h1">
+        <xsl:for-each css:select="a#portal-logo">
+          <xsl:value-of select="@title" />
+        </xsl:for-each>
+    </replace>
     <copy content='//*[@id="portal-globalnav"]' theme='//*[@id="menu"]' />
-    <!-- Drop global navigation menu's id-->
     <drop attributes="id" css:content="#portal-globalnav"/>
-    <!-- Pull in personal tools -->
     <prepend content='//*[@id="portal-personaltools-wrapper"]' theme='//*[@id="header"]' />
-    <!-- Pull in search box -->
     <prepend content='//*[@id="portal-searchbox"]' theme='//*[@id="header"]' />
-    <!-- Pull in content -->
-    <copy content='//*[@id="portal-column-content"]' theme='//*[@id="colOne"]' />
-    <!-- Drop global navigation menu's class-->
-    <drop attributes="class" css:content="#portal-column-content"/>
-    <!-- Pull in column 1 -->
-    <copy content='//*[@id="portal-column-one"]' theme='//*[@id="colTwo"]' />
-    <!-- Drop global navigation menu's class-->
+
+    <prepend css:content="#viewlet-above-content" css:theme="#content-wrapper"/>
+    <prepend css:content="#edit-bar" css:theme="#content-wrapper"/>
+    <copy css:content-children="#content" css:theme="#colOne"/>
+    <before css:content="#viewlet-below-content" css:theme="#footer"/>
+
+    <copy content-children='//*[@id="portal-column-one"]' theme='//*[@id="colTwo"]' />
     <drop attributes="class" css:content="#portal-column-one"/>
     <copy content='//*[@id="portal-footer"]' theme='//*[@id="footer"]' />
-	<append content='//*[@id="portal-colophon"]' theme='//*[@id="footer"]' />
-	<append content='//*[@id="portal-siteactions"]' theme='//*[@id="footer"]' />
-
-    <copy content='//*[@id="portal-logo"]' theme='//*[@id="logo"]' />
-    
-    <drop theme='//*[@id="slogan"]' />
-    <drop theme='//*[@id="rss"]' />
-    <theme href="index.html" />
-    
+    <append content='//*[@id="portal-colophon"]' theme='//*[@id="footer"]' />
+    <append content='//*[@id="portal-siteactions"]' theme='//*[@id="footer"]' />
 
 </rules>

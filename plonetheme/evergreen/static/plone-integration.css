@@ -1,0 +1,119 @@
+body {
+
+    color: #2fcc61;
+}
+
+#portal-globalnav {
+    background: none;
+}
+.searchSection{
+    color:#fff;
+}
+
+/* Light green */
+#content a:link,
+dl.portlet a:link,
+dl.portalMessage a,
+#content dl.portalMessage a,
+#content .documentDescription,
+#content #description,
+dl.portalMessage dt{
+	color: #00FF51;
+}
+
+/* Dark green */
+#portal-colophon a,
+a:link,
+a:visited,
+.formHelp,
+#content a:visited,
+dl.portlet a:visited,
+#content .discreet,
+#sidebar .discreet,
+#content div.documentByLine {
+	color: #23c557;
+}
+
+p{
+	color: #2fcc61;
+}
+
+fieldset.formPanel{
+	background-color: #FFFFFF !important;
+}
+
+fieldset.formPanel,
+fieldset.formPanel .formHelp{
+	color: #000;
+}
+
+/* Light grey bg*/
+dl.portalMessage dt,
+#portal-personaltools dd a:hover,
+.ploneCalendar .weekdays th{
+    background-color: #666;
+}
+
+/* Dark grey bg*/
+#portal-personaltools,
+#portal-personaltools dd,
+dl.portalMessage,
+div.managePortletsLink,
+a.managePortletsFallback,
+dl.portlet dt,
+div.portletAssignments div.portletHeader,
+.pb-ajax,
+.pb-image,
+#portal-footer{
+	background-color: #333;
+}
+
+ #header {
+    height: 201px;
+}
+
+#content fieldset {
+    border-color: #23c557;
+}
+
+ #menu {
+    margin-top: 2px;
+ }
+
+#menu a:hover, #menu .selected a {
+    background: #000000;
+ }
+
+#viewlet-above-content,
+#edit-bar{
+    float:left;
+    width:500px;	
+}
+
+#menu ul {
+    padding: 72px 0 0;
+}
+
+#content-wrapper {
+    width: 750px;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+}
+
+.ploneCalendar .todaynoevent {
+    border: 2px solid #666;
+}
+
+#colTwo li {
+    margin-bottom: 0px;
+}
+
+#logo h1 {
+    padding-top:50px;
+}
+
+dl.portlet dt a:link,
+dl.portlet dt a:visited,
+dl.portlet dt a:hover{
+	color: #00FF51;
+}

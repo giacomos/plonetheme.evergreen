@@ -5,87 +5,12 @@ http://www.freecsstemplates.org
 Released for free under a Creative Commons Attribution 2.5 License
 */
 
-
-#portal-globalnav {
-    background: none;
-}
-.searchSection{
-    color:#fff;
-}
-
-/* Light green */
-#content a:link,
-dl.portlet a:link,
-dl.portalMessage a,
-#content dl.portalMessage a,
-#content .documentDescription,
-#content #description,
-dl.portalMessage dt{
-	color: #00FF51;
-}
-
-
-
-
-
-
-/* Dark green */
-#portal-colophon a,
-a:link,
-a:visited,
-.formHelp,
-#content a:visited,
-dl.portlet a:visited,
-#content .discreet,
-#sidebar .discreet,
-#content div.documentByLine {
-	color: #23c557;
-}
-
-p{
-	color: #2fcc61;
-}
-
-fieldset.formPanel{
-	background-color: #FFFFFF !important;
-}
-
-fieldset.formPanel,
-fieldset.formPanel .formHelp{
-	color: #000;
-}
-
-/* Light grey bg*/
-dl.portalMessage dt,
-#portal-personaltools dd a:hover,
-.ploneCalendar .weekdays th{
-    background-color: #666;
-}
-
-/* Dark grey bg*/
-#portal-personaltools,
-#portal-personaltools dd,
-dl.portalMessage,
-div.managePortletsLink,
-a.managePortletsFallback,
-dl.portlet dt,
-div.portletAssignments div.portletHeader,
-.pb-ajax,
-.pb-image,
-#portal-footer{
-	background-color: #333;
-}
-
-#content fieldset {
-    border-color: #23c557;
-}
-/**********************************/
-body{
+body {
 	margin: 0;
 	padding: 0;
 	background: #000000 url(images/img1.gif) repeat-x;
-	font: 100% Arial,FreeSans,sans-serif;
-	color: #2fcc61;
+	font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #2FCC61;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -104,8 +29,8 @@ a:hover {
 /* Header */
 
 #header {
-	width: 1000px;
-	height: 202px;
+	width: 750px;
+	height: 200px;
 	margin: 0 auto;
 	background: url(images/img2.jpg) no-repeat center bottom;
 }
@@ -123,8 +48,8 @@ a:hover {
 	color: #FFFFFF;
 }
 
-#logo  {
-	padding: 75px 0 0 0;
+#logo h1 {
+	padding: 115px 0 0 0;
 	letter-spacing: -3px;
 	font-size: 3.5em;
 }
@@ -137,12 +62,12 @@ a:hover {
 /* Menu */
 
 #menu {
-    clear:both;
-    float: right;
-    margin-top: 6px;
+	float: right;
 }
 
 #menu ul {
+	margin: 0;
+	padding: 164px 0 0 0;
 	list-style: none;
 }
 
@@ -162,14 +87,14 @@ a:hover {
 	color: #FFFFFF;
 }
 
-#menu a:hover, #menu .selected a {
+#menu a:hover, #menu .active a {
 	background: #000000;
 }
 
 /* Content */
 
-#theme-content {
-	width: 1000px;
+#content {
+	width: 750px;
 	margin: 0 auto;
 	padding: 20px 0 0 0;
 }
@@ -178,7 +103,7 @@ a:hover {
 
 #colOne {
 	float: left;
-	width: 750px;
+	width: 500px;
 }
 
 #colOne h2 {
@@ -209,7 +134,6 @@ a:hover {
 	width: 220px;
 }
 
-/*
 #colTwo ul {
 	margin: 0;
 	padding: 10px 0 0 0;
@@ -228,7 +152,7 @@ a:hover {
 	padding-left: 20px;
 	list-style: square inside;
 }
-*/
+
 #colTwo h2 {
 	padding-bottom: 5px;
 	font-size: 1em;
@@ -247,7 +171,7 @@ a:hover {
 
 #footer {
 	clear: both;
-	width: 1000px;
+	width: 750px;
 	height: 60px;
 	margin: 0 auto;
 	padding: 20px 0;

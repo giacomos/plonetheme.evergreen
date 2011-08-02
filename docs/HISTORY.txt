@@ -1,6 +1,17 @@
 Changelog
 =========
 
+1.2 (2011-07-30)
+----------------
+- Fixed doctype [giacomos]
+
+1.1 (2011-06-19)
+----------------
+- cleaning of unused rules
+- all rules updated
+- added an integration css
+- changed header color 
+
 1.0 (2011-06-11)
 ---------------------
 
